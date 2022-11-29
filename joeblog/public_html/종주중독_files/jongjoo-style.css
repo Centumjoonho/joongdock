@@ -1,0 +1,195 @@
+*{
+    margin : 0;
+    padding : 0 ;
+    box-sizing : border-box;;
+}
+body{
+    background-color:   rgba(19, 143, 143, 0.295);
+
+}
+.wrap{
+    position: absolute;
+    top : 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color: aliceblue;
+    text-align: center;
+}
+.nvar{
+    position: absolute;
+    top : 0%;
+    left: 0%;
+    width: 100%;
+    background-color: aliceblue;
+}
+.material-icons{
+    font-size: 10rem;
+
+}
+.lg-text{
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+.sm-text{
+    font-size: 1.5rem;
+
+}
+#dynamic{
+    position: relative;
+    display: inline-block;
+}
+#dynamic::after{
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    right: -10px;
+    width: 4px;
+    height: 100%;
+    background-color: white;
+}
+#dynamic.active::after{
+    display: none;
+}
+
+.btn{
+  text-decoration: none;
+  font-size: 2rem;
+  color: white;
+  padding: 10px 20px 10px 20px;
+  margin: 20px;
+  display: inline-block;
+  border-radius: 10px;
+  transition : all 0.1s;
+  
+  /* 슬로우모션 */
+  text-shadow: 0px -2px rgba(0, 0, 0, 0.493);
+  font-family: 'Lobster', cursive;
+}
+.btn:active{
+  transform: translateY(10px); 
+  /* 버튼 위치이동으로 눌림 효과 */
+}
+.btn.add{
+  background-color:rgba(65, 105, 225, 0.26);
+  border-bottom: 5px solid rgba(0, 0, 88, 0.356);
+}
+.btn.add:active{
+  border-bottom: 2px solid rgba(0, 0, 88, 0.356);
+}
+.btn.delete{
+  background-color:rgba(225, 65, 65, 0.226);
+  border-bottom: 5px solid rgba(95, 1, 1, 0.356);
+
+}
+.btn.delete:active{
+  border-bottom: 2px solid rgba(95, 1, 1, 0.356);
+}
+.thumnail{
+  background-color: gray;
+  margin: 10px;
+  width: 300px;
+  height: 300px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  border :1px solid white;
+}
+.thumnail.round{
+  border-radius: 20px;
+}
+.thumnail.circle{
+  border-radius: 100%;
+}
+#colums{
+    column-width: 350px;
+    /* border:5px solid ; */
+    margin: 5px; 
+    column-gap: 15px;
+}
+#colums figure{
+    display: inline-block;
+    border:1px solid rgba(0,0,0,0.2);
+    margin: 0;
+    margin-bottom: 15px;
+    padding: 10px;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.5) ;
+}
+#colums figure img{
+    width: 100%;
+}
+#colums figure figcaption{
+    color: #212529;
+    border-top: 1px solid rgba(0,0,0,0.2);
+    padding: 10px;
+}
+.tree{
+  color: darkorange;
+}
+.tree, .tree ul{
+  list-style: none;
+  padding-left: 15px;
+}
+.tree *:before{
+  width: 17px;
+  height: 17px;
+  display: inline-block;
+}
+.tree label{
+  cursor: pointer;
+}
+.tree label::before{
+  content: '\f255';
+  font-family: fontello;
+}
+.tree a {
+  text-decoration: none;
+  color: darkslategray;
+}
+.tree a:before{
+  content: '\e800';
+  font-family: fontello;
+}
+.tree input[type="checkbox"] {
+    display: none;
+  }
+.tree input[type="checkbox"]:checked~ul{
+    display: none;
+    
+  }
+.tree input[type="checkbox"]:checked+label::before{
+  content: '\f256';
+  font-family: fontello;
+}
+
+div.left{
+  width : 15%;
+  float: left;
+  box-sizing:border-box;
+  background-color:rgba(19, 143, 143, 0.295);
+}
+div.right{
+  width : 85%;
+  float: right;
+  box-sizing: border-box;
+  background-color: rgba(1, 5, 5, 0.295);
+}
+.container{
+  /* border: 5px solid black; */
+}
+.container>*{
+  /* border: 5px solid red; */
+}
+.container>.content>*{
+  /* border: 5px solid green; */
+}
+.header{
+  height: 50px;
+  margin: 10PX;
+
+  
+}
+.main{
+  margin-top: 5px;
+}
